@@ -1,0 +1,27 @@
+{
+  "name": "99motos",
+  "version": "0.0.1",
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "compass": "^0.1.1",
+    "gulp": "^3.8.11",
+    "gulp-aws-s3": "0.0.10",
+    "gulp-cache": "^0.2.9",
+    "gulp-compass": "^2.0.4",
+    "gulp-concat": "^2.5.2",
+    "gulp-confirm": "^1.0.2",
+    "gulp-connect": "^4.0.0",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-include": "^1.1.1",
+    "gulp-jasmine": "^2.1.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.4"
+  },
+  "dependencies": {
+    "gulp-cssmin": "^0.1.7",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-webserver": "^0.9.1"
+  }
+}

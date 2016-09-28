@@ -1,0 +1,114 @@
+@include keyframes(slide-down) {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@include keyframes(slide-up) {
+  0%, 50% {
+    top: 352px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@include keyframes(show-login) {
+  0% {
+    top: -30px;
+    @include opacity(0);
+  }
+  100% {
+    top: 0;
+    @include opacity(1);
+  }
+}
+
+@include keyframes(fade-in) {
+  0% {
+    @include opacity(0);
+  }
+  100% {
+    @include opacity(1);
+  }
+}
+
+@include keyframes(tips) {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(20px);
+  }
+  70% {
+    -webkit-transform: translateY(-5px);
+  }
+  90%, 100% {
+    -webkit-transform: translateY(0);
+  }
+}
+
+@include keyframes(dash){
+  0%{
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50%{
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35;
+  }
+  100%{
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124;
+  }
+}
+@include keyframes(color){
+  100%, 0%{
+    stroke: color('secondary');
+  }
+  40%{
+    stroke: color('primary');
+  }
+  66%{
+    stroke: color('secondary');
+  }
+  80%, 90%{
+    stroke: color('primary');
+  }
+}
+
+@include keyframes(rotate){
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@include keyframes(modal){
+  0%{
+    @include opacity(0);
+    top: 70px;
+  }
+  90%{
+    @include opacity(1);
+  }
+  100%{
+    top: 0;
+  }
+}
+
+@include keyframes(rippler-background){
+  0%{
+    @include opacity(0);
+  }
+  100%{
+    @include opacity(1);
+  }
+}

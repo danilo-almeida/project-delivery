@@ -1,0 +1,26 @@
+$colors-templates: (
+        'default': (
+                'base': #363a40,
+                'light': #4C5159,
+                'dark': #4C5159
+        )
+);
+$colors: (
+        'primary': #1ABC9C,
+        'secondary': #4499D7,
+        'alternative': #249BAC,
+        'header': #4C5159,
+
+        'darkgray': #363a40,
+        'gray' : #4C5159
+);
+
+//
+
+$susy: (
+        columns: 12,
+        gutters: 10,
+        math: fluid,
+        output: float,
+        gutter-position: inside
+);

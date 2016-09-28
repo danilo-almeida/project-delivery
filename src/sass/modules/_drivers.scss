@@ -1,0 +1,206 @@
+.list-drivers {
+  padding: 10px 10px 10px 15px;
+  .filter {
+    @include transition(200ms ceaser($easeOutExpo));
+    height: 120px;
+    overflow: hidden;
+    &.hide-filter {
+      height: 0;
+    }
+  }
+
+  .form-search {
+    font-size: 12px;
+    color: color('gray');
+    letter-spacing: 0.3px;
+    line-height: 15px;
+
+    .text-search {
+      display: block;
+    }
+    .input-search {
+      width: 300px;
+    }
+  }
+  .list {
+    position: relative;
+    &.hide-shadow:after {
+      height: 5px;
+    }
+    &:after {
+      @include transition(200ms);
+      content: '';
+      opacity: 0.2;
+      background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0.00) 0%, #000000 100%);
+      position: absolute;
+      bottom: -10px;
+      left: -15px;
+      right: -10px;
+      margin: auto;
+      height: 40px;
+      z-index: 2;
+    }
+    .scroll-viewport {
+      position: relative;
+      top: 10px;
+      height: 380px;
+      width: 100%;
+      .scroll-overview {
+        right: 9px;
+      }
+    }
+    .scroll-bar {
+      background: #D9D9D9;
+      @include border-radius(40px);
+      width: 4px;
+      z-index: 1;
+      right: -2px;
+      top: 10px;
+      .scroll-thumb {
+        background: color('alternative');
+        @include border-radius(40px);
+        width: 4px;
+        left: 0;
+      }
+    }
+    .driver-detail {
+      height: 60px;
+      width: 100%;
+      margin: 0 0 10px 0;
+      @include border-radius(4px);
+      background: #FFFFFF;
+      @include box-shadow(0px 1px 3px 0px rgba(0, 0, 0, 0.20));
+      .driver-profile {
+        @include span(4);
+        @include border-radius(4px);
+        padding: 0;
+        border: 1px solid #E6E6E6;
+        height: 50px;
+        margin: 5px 0 0 4px;
+        .photo {
+          @include border-radius(100%);
+          width: 30px;
+          height: 30px;
+          overflow: hidden;
+          @include align-items(center);
+          @include display-flex();
+          @include justify-content(center);
+          margin: 10px;
+          float: left;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .name-status {
+          float: left;
+          width: 200px;
+          margin-top: 8px;
+          .name {
+            font-weight: 600;
+            font-size: 14px;
+            color: #505459;
+            line-height: 17px;
+          }
+          .status {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 10px;
+            color: #BFBFBF;
+            line-height: 12px;
+            float: right;
+            position: relative;
+            top: -3px;
+            .fa {
+              font-size: 17px;
+              position: relative;
+              right: -6px;
+              top: 2px;
+            }
+          }
+        }
+        .location {
+          font-weight: 400;
+          font-size: 14px;
+          color: #BFBFBF;
+          line-height: 17px;
+          float: left;
+          width: 210px;
+        }
+      }
+
+      .driver-estimated {
+        @include span(5);
+        height: 35px;
+        margin: 15px 0;
+        color: #BFBFBF;
+        font-size: 14px;
+        text-align: center;
+        .estimated-arrow {
+          position: relative;
+          top: 5px;
+        }
+        .time {
+          color: #505459;
+        }
+        .colorize {
+          font-weight: bold;
+        }
+        &.green {
+          .colorize {
+            color: #7ABF30;
+          }
+          svg {
+            rect {
+              fill: #7ABF30;
+            }
+            path {
+              stroke: #7ABF30
+            }
+          }
+        }
+        &.red {
+          .colorize {
+            color: #D0021B;
+          }
+          svg {
+            rect {
+              fill: #D0021B;
+            }
+            path {
+              stroke: #D0021B
+            }
+          }
+        }
+      }
+
+      .call {
+        @include span(24%);
+        float: right;
+        text-align: right;
+        .btn-darkgray {
+          width: 130px;
+        }
+      }
+    }
+  }
+
+  .loading-wrapper {
+    @include transition(200ms);
+    @include opacity(0);
+    @include border-radius(100%);
+    top: 51px;
+    height: 0;
+    z-index: 2;
+    transform: skewX(0deg) skewY(10deg);
+    &.visible {
+      height: 520px;
+      @include opacity(1);
+      transform: skewX(0deg) skewY(0deg);
+      @include border-radius(0);
+    }
+    .loader-circular {
+      top: 0;
+    }
+  }
+}

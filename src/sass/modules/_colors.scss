@@ -1,0 +1,66 @@
+@each $color-key, $color-variants in $colors-templates {
+  $base: map-get($color-variants, 'base');
+  $light: map-get($color-variants, 'light');
+  $dark: map-get($color-variants, 'dark');
+  [data-template="#{$color-key}"]{
+    .background {
+      background-color: $base;
+      &.light{
+        background-color: $light;
+      }
+    }
+    .color {
+      color: $base;
+      &.hover{
+        &:hover{
+          color: $base;
+        }
+      }
+      &.light{
+        color: $light;
+        &.hover{
+          &:hover{
+            color: $light;
+          }
+        }
+      }
+      &.dark{
+        color: $dark;
+        &.hover{
+          &:hover{
+            color: $dark;
+          }
+        }
+      }
+
+      &.active{
+        color: $base !important;
+      }
+    }
+    .pseudo {
+      &:before {
+        background: $base;
+      }
+      &:after {
+        background: $base;
+      }
+      &.light{
+        &:before {
+          background: $light;
+        }
+        &:after {
+          background: $light;
+        }
+      }
+      &.dark{
+        &:before {
+          background: $dark;
+        }
+        &:after {
+          background: $dark;
+        }
+      }
+    }
+
+  }
+}

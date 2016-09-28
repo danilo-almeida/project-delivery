@@ -1,0 +1,68 @@
+<div class="page-login">
+    <div class="bg"></div>
+    <img src="imgs/99-motos.png" class="logo" alt=""/>
+
+    <div class="wrapper-login" ng-class="{small: isForgotPass}">
+        <div class="heading pseudo">
+            <figure class="logo">
+                <img src="imgs/logo-bk.png" alt=""/>
+            </figure>
+        </div>
+        <button class="btn btn-back" ng-show="isForgotPass" ng-click="backLogin()"><i class="fa fa-angle-left"></i>
+            Voltar para o Login
+        </button>
+        <div class="scene">
+            <form class="form-login form-default" ng-class="{hide: isForgotPass}" ng-submit="auth()" name="login"
+                  novalidate>
+                <div class="row">
+                    <label for="user-email" class="label gray"
+                           ng-class="{error : login.user_email.$touched && (login.user_email.$error.required || login.user_email.$error.email)}">E-Mail</label>
+                    <span class="alert-error">Este e-mail não é valido</span>
+                    <input type="email" id="user-email" name="user_email" ng-model="user.email" required
+                           class="input-default"/>
+                </div>
+                <div class="row">
+                    <label for="user-input" class="label gray"
+                           ng-class="{error : login.user_password.$touched && login.user_password.$error.required}">Senha</label>
+                    <span class="alert-error">Este campo é obrigatório</span>
+                    <input type="password" id="user-input" name="user_password" ng-model="user.password" required
+                           class="input-default"/>
+                </div>
+                <div class="row text-right">
+                    <a href ng-click="forgotPassword()" class="btn btn-link">esqueci minha senha</a>
+                </div>
+
+                <div class="btn-spacing">
+                    <md-button flex="100" class="md-button md-default-theme btn-primary block"
+                               ng-disabled="!login.$valid">ENTRAR
+                    </md-button>
+                </div>
+            </form>
+            <form class="form-forgot form-default" ng-class="{show: isForgotPass, hide: sendSuccess}"
+                  ng-submit="sendPassword()" name="forgot" novalidate>
+                <div class="row">
+                    <label for="user-email" class="label gray"
+                           ng-class="{error : forgot.forgot_email.$touched && (forgot.forgot_email.$error.required || forgot.forgot_email.$error.email)}">E-Mail</label>
+                    <span class="alert-error">Este e-mail não é valido</span>
+                    <input type="email" id="forgot-email" name="forgot_email" ng-model="forgot.email" required
+                           class="input-default"/>
+                </div>
+
+                <div class="btn-spacing clear">
+                    <md-button flex="100" class="md-button md-default-theme btn-primary block"
+                               ng-disabled="!forgot.$valid">ENVIAR SENHA POR E-MAIL
+                    </md-button>
+                </div>
+            </form>
+            <div class="loading-wrapper" ng-class="{visible: busy}" ng-show="busy">
+                <svg class="loader-circular">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+<div class="text">
+    Atendimento: (11) 2233 6847 <br/>
+    De segunda a sexta das 9h às 18h.
+</div>
+</div>

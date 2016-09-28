@@ -1,0 +1,106 @@
+.form-default {
+  .label {
+    margin: 0 0 3px;
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+    left: 3px;
+    & small {
+      opacity: 0.5;;
+      font-size: 10px;
+      color: #39A6B3;
+      line-height: 12px;
+    }
+    &.gray {
+      font-size: 12px;
+      color: #7D7D7D;
+      text-transform: capitalize;
+    }
+
+    &.error {
+      color: #AF3E4C;
+      & + .alert-error {
+        @include opacity(1);
+      }
+    }
+  }
+  .input-default {
+    background: #FFFFFF;
+    color: #707986;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 13px;
+    padding: 9px 10px;
+    @include transition(200ms);
+    &:focus {
+      outline: none;
+      border: 1px solid #CCCCCC;
+      @include box-shadow(0px 0px 5px 0px rgba(0, 0, 0, 0.20));
+    }
+
+    &.ng-invalid.ng-touched {
+      color: #AF3E4C;
+      border-color: #AF3E4C;
+    }
+
+    &.ng-valid.ng-dirty.ng-touched {
+      background: #FFFFFF;
+      border-color: #39A6B3;
+      border-radius: 4px;
+      color: #4F5966;
+    }
+    &[disabled] {
+      background: rgba(255, 255, 255, 0.50);
+      border: 1px solid #E6E6E6;
+      border-radius: 4px;
+    }
+  }
+
+  .alert-error {
+    font-size: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #AF3E4C;
+    float: right;
+    position: relative;
+    top: 7px;
+    @include opacity(0);
+    @include transition(100ms);
+  }
+}
+
+/* modal */
+.wrapper-modal {
+  .title {
+    font-size: 22px;
+    color: #39A6B3;
+    line-height: 27px;
+    font-weight: bold;
+  }
+  .subtitle {
+    font-weight: 600;
+    font-size: 14px;
+    color: #707986;
+    line-height: 17px;
+    text-transform: uppercase;
+  }
+}
+
+.form-internal {
+  .row {
+    margin: 20px 0;
+    @extend %clear;
+  }
+
+  .label {
+    font-weight: 600;
+    font-size: 10px;
+    color: #39A6B3;
+    line-height: 12px;
+  }
+}
+
+*{
+  outline: none;
+}

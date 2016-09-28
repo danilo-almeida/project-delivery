@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="245px" height="12px" viewBox="0 0 245 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <defs></defs>
+    <g id="PEDIDOS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="02.1-DETALHE-DO-PEDIDO-LIST" sketch:type="MSArtboardGroup" transform="translate(-424.000000, -319.000000)">
+            <g id="MODAL" sketch:type="MSLayerGroup" transform="translate(94.000000, 87.000000)">
+                <g id="BOX" sketch:type="MSShapeGroup">
+                    <g id="Group" transform="translate(10.000000, 198.000000)">
+                        <g id="TOOLTIP-Copy" transform="translate(3.000000, 0.000000)">
+                            <g id="Rectangle-276-+-Path-145-+-Chega-em-10min---2.4" transform="translate(317.000000, 13.000000)">
+                                <g id="Rectangle-276-+-Path-145" transform="translate(0.000000, 22.000000)">
+                                    <rect id="Rectangle-276" x="0" y="4" width="243" height="2"></rect>
+                                    <path d="M238.402832,9.73730469 L243.161505,4.97863151 L238.541211,0.358337449" id="Path-145" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
